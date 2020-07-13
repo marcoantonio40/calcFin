@@ -1,7 +1,8 @@
-package br.com.marco.calcfin
+package br.com.marco.calcfin.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.com.marco.calcfin.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

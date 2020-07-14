@@ -14,6 +14,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:text="Período (meses):"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,8 +26,8 @@
         android:id="@+id/editTextNumberDecimal_periodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="8dp"
         android:digits="1234567890"
         android:ems="2"
@@ -37,6 +38,131 @@
         android:textCursorDrawable="@android:color/black"
         app:layout_constraintBottom_toBottomOf="@+id/textView_periodo"
         app:layout_constraintStart_toEndOf="@+id/textView_periodo"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.619" />
+
+    <TextView
+        android:id="@+id/textView_valorInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Valor Inicial (R$):"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_periodo" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal_valorInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:maxLength="10"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_valorInicial"
+        app:layout_constraintStart_toEndOf="@+id/textView_valorInicial"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal_periodo"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/textView_AporteMensal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Aporte mensal (R$):"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_valorInicial" />
+
+    <TextView
+        android:id="@+id/textView_rendimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Rendimento (%):"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_AporteMensal" />
+
+    <TextView
+        android:id="@+id/textView_Administracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Administração (%):"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_rendimento" />
+
+    <TextView
+        android:id="@+id/textView_inflacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Inflação (%):"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Administracao" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal_aporteMensal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_AporteMensal"
+        app:layout_constraintStart_toEndOf="@+id/textView_AporteMensal" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal_rendimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="3"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_rendimento"
+        app:layout_constraintStart_toEndOf="@+id/textView_AporteMensal" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal_administracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="3"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_Administracao"
+        app:layout_constraintStart_toEndOf="@+id/textView_Administracao" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal_inflacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="3"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_inflacao"
+        app:layout_constraintStart_toEndOf="@+id/textView_Administracao" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
